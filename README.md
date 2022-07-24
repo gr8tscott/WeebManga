@@ -20,6 +20,13 @@ A manga reading application
 
 ---
 
+### **_Component Heirarchy and ERD_**
+
+![ComponentHeirarchy](CH.png)
+![ERD](ERD.png)
+
+---
+
 ### **_Getting Started_**
 
 #####
