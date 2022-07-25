@@ -4,6 +4,8 @@ const { Author, Manga } = require('../models')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
+  Author.collection.drop()
+  Manga.collection.drop()
   const author1 = await new Author({
     name: 'Apple',
     works_created: ['Naruto', 'One Punch Man']
