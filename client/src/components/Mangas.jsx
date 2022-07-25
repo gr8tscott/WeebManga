@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Food = (props) => {
+const Mangas = (props) => {
   return (
     <div className='mangaCard'>
         {
@@ -20,7 +20,7 @@ const Food = (props) => {
     )
   }
 
-export default Food
+export default Mangas
 
 // title: 'Naruto',
 //       title_img: 'images/titles/NarutoCoverTankobon1.jpeg',

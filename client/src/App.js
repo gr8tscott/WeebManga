@@ -21,15 +21,16 @@ function App() {
     getManga()
     console.log(getManga)
   }, [])
-  // const getFood = async () => {
-  //   const res = await axios.get(`http://localhost:3001/food`)
-  //   setFood(res.data)
-  // }
-  // //npm i concurrently
-  // useEffect(() => {
-  //   getFood()
-  //   console.log(getFood)
-  // }, [])
+
+  const getAuthor = async () => {
+    const res = await axios.get(`http://localhost:3001/authors`)
+    setAuthor(res.data)
+  }
+  //npm i concurrently
+  useEffect(() => {
+    getAuthor()
+    console.log(getAuthor)
+  }, [])
 
   return (
     <div className="App">
