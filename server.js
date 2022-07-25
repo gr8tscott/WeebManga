@@ -4,7 +4,8 @@ const logger = require('morgan')
 const PORT = process.env.PORT || 3001
 const db = require('./db')
 
-const { Manga } = require('./models')
+const { Manga, Author } = require('./models')
+const { mangaController } = require('./controllers')
 
 const app = express()
 
@@ -17,9 +18,13 @@ app.get('/', (req, res) => {
 })
 
 // server.js
-app.get('/mangas', async (req, res) => {
-  const mangas = await Manga.find({})
-  res.json(mangas)
+app.get('/mangas', mangaController.getAllMangas)
+
+app.get('/mangas/:_id', mangaController.getChapters)
+
+app.get('/authors', async (req, res) => {
+  const authors = await Author.find({})
+  res.json(authors)
 })
 
 app.listen(PORT, () => {

@@ -4,8 +4,8 @@ const { Author, Manga } = require('../models')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-  Author.collection.drop()
-  Manga.collection.drop()
+  //   Author.collection.drop()
+  //   Manga.collection.drop()
   const author1 = await new Author({
     name: 'Apple',
     works_created: ['Naruto', 'One Punch Man']
@@ -21,30 +21,36 @@ const main = async () => {
   const manga = [
     {
       title: 'Naruto',
-      title_img: 'images/titles/NarutoCoverTankobon1.jpeg',
+      title_img: 'https://i.imgur.com/r1VCgPQ.jpg',
       description: 'Naruto run lol',
-      chapters: '250',
+      chapters: {},
       author: author1._id
     },
     {
       title: 'One Punch Man',
-      title_img: 'images/titles/onepunchman.jpg',
+      title_img: 'https://i.imgur.com/QIl9ACg.jpg',
       description: 'He hits you and you die right away',
-      chapters: '69',
+      chapters: {},
       author: author1._id
     },
     {
       title: 'One Piece',
-      title_img: 'images/titles/onepiece.jpg',
+      title_img: 'https://i.imgur.com/kb9oxAn.jpg',
       description: 'Gonna be king of the Pirates',
-      chapters: '10000',
+      chapters: {
+        1: 'https://i.imgur.com/TCx3LRA.png',
+        2: 'https://i.imgur.com/o0PetPL.png',
+        3: 'https://i.imgur.com/g7TTqBB.png',
+        4: 'https://i.imgur.com/GkJcvGB.png',
+        5: 'https://i.imgur.com/G8S0gYS.png'
+      },
       author: author2._id
     },
     {
       title: 'HunterXHunter',
-      title_img: 'images/titles/hunterxhunter.jpeg',
+      title_img: 'https://i.imgur.com/tX5E4cE.jpg',
       description: 'Looking for my Dad',
-      chapters: '420',
+      chapters: {},
       author: author2._id
     }
   ]
@@ -54,6 +60,7 @@ const main = async () => {
 }
 
 const run = async () => {
+  db.dropDatabase()
   await main()
   db.close()
 }
