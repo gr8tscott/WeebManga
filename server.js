@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 // server.js
 app.get('/mangas', mangaController.getAllMangas)
 
-app.get('/mangas/:_id', mangaController.getChapters)
+app.get('/mangas/:id', mangaController.getMangaById)
 
 app.get('/authors', async (req, res) => {
   const authors = await Author.find({})

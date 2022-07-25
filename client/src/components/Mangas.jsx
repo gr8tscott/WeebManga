@@ -5,14 +5,17 @@ const Mangas = (props) => {
     <div className='mangaCard'>
         {
           props.manga.map((mangas) => (
-            <div className='manga-card' key={mangas.id}>
+            <div className='manga-card' key={mangas._id}>
                   <h3>{mangas.title}</h3>
                   <img src={mangas.title_img}/>
                   <p>{mangas.description}</p>
-                
-              {/* {food.meals.map((meal)=> (
-                <h4>{meal}</h4>
-                ))} */}
+                  <img src={mangas.chapters} />
+                  {mangas.chapters.map((pages) => (
+                    <img src={pages} />
+                  ))}
+                  {/* {console.log(mangas.chapters)} */}
+                <h4>Want to read the first Chapter? Click <button>here</button></h4>
+               
             </div>
           ))
         }
