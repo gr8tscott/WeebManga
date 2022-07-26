@@ -6,6 +6,7 @@ const db = require('./db')
 
 const { Manga, Author } = require('./models')
 const { mangaController } = require('./controllers')
+const { reviewController } = require('./controllers')
 
 const app = express()
 
@@ -22,10 +23,14 @@ app.get('/mangas', mangaController.getAllMangas)
 
 app.get('/mangas/:id', mangaController.getMangaById)
 
+//////////////////////
 app.get('/authors', async (req, res) => {
   const authors = await Author.find({})
   res.json(authors)
 })
+
+/////////////////////////
+app.get('/reviews', reviewController.getAllReviews)
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)

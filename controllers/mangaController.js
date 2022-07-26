@@ -19,6 +19,6 @@ const getMangaById = async (req, res) => {
 
 module.exports = {
   getAllMangas,
-  getChapters,
+  // getChapters,
   getMangaById
 }

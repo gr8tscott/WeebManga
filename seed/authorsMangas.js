@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Author, Manga } = require('../models')
+const { Author, Manga, Review } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -36,7 +36,13 @@ const main = async () => {
       title: 'One-Punch Man',
       title_img: 'https://i.imgur.com/QIl9ACg.jpg',
       description: 'He hits you and you die right away',
-      chapters: [],
+      chapters: [
+        'https://i.imgur.com/fiOvFZw.png',
+        'https://i.imgur.com/6qr7GOs.png',
+        'https://i.imgur.com/QRi3a77.png',
+        'https://i.imgur.com/3EpPmVT.png',
+        'https://i.imgur.com/4gwyejh.png'
+      ],
       author: author1._id
     },
     {
@@ -70,6 +76,18 @@ const main = async () => {
 
   await Manga.insertMany(manga)
   console.log('Created manga!')
+
+  const review = [
+    {
+      name: 'test',
+      manga: 'test',
+      text: 'test',
+      review: 'test'
+    }
+  ]
+
+  await Review.insertMany(review)
+  console.log('Created review!')
 }
 
 const run = async () => {
