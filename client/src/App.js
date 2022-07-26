@@ -42,6 +42,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/mangas" element={<Mangas manga={manga} />} />
           <Route path="/authors" element={<Authors authors={authors} />} />
+          <Route path="/reviews" element={<Reviews />} />
         </Routes>
       </main>
     </div>
