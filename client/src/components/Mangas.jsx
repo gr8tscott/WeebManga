@@ -9,7 +9,7 @@ const Mangas = (props) => {
                   <h3>{mangas.title}</h3>
                   <img src={mangas.title_img}/>
                   <p>{mangas.description}</p>
-                  <img src={mangas.chapters} />
+                  {/* <img src={mangas.chapters} /> */}
                   {mangas.chapters.map((pages) => (
                     <img src={pages} />
                   ))}

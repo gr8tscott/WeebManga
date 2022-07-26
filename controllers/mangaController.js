@@ -5,11 +5,11 @@ const getAllMangas = async (req, res) => {
   res.json(mangas)
 }
 
-const getChapters = async (req, res) => {
-  const { id } = req.params
-  const chap = await Manga.find({ _id: id })
-  res.json(chap)
-}
+// const getChapters = async (req, res) => {
+//   const { id } = req.params
+//   const chap = await Manga.find({ _id: id })
+//   res.json(chap)
+// }
 
 const getMangaById = async (req, res) => {
   const { id } = req.params

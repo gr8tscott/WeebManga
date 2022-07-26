@@ -23,11 +23,17 @@ const main = async () => {
       title: 'Naruto',
       title_img: 'https://i.imgur.com/r1VCgPQ.jpg',
       description: 'Naruto run lol',
-      chapters: [],
+      chapters: [
+        'https://i.imgur.com/tHYmXHk.png',
+        'https://i.imgur.com/uzXt0vS.png',
+        'https://i.imgur.com/sTZKLqd.png',
+        'https://i.imgur.com/9iJH3Ih.png',
+        'https://i.imgur.com/buODa5i.png'
+      ],
       author: author1._id
     },
     {
-      title: 'One Punch Man',
+      title: 'One-Punch Man',
       title_img: 'https://i.imgur.com/QIl9ACg.jpg',
       description: 'He hits you and you die right away',
       chapters: [],
@@ -47,10 +53,17 @@ const main = async () => {
       author: author2._id
     },
     {
-      title: 'HunterXHunter',
+      title: 'Hunter X Hunter',
       title_img: 'https://i.imgur.com/tX5E4cE.jpg',
       description: 'Looking for my Dad',
-      chapters: [],
+      chapters: [
+        'https://i.imgur.com/6tkFXSJ.png',
+        'https://i.imgur.com/rvVZclh.png',
+        'https://i.imgur.com/nHjreAh.png',
+        'https://i.imgur.com/XgRHykH.png',
+        'https://i.imgur.com/LIaqmUh.png',
+        'https://i.imgur.com/Od1YmgH.png'
+      ],
       author: author2._id
     }
   ]
