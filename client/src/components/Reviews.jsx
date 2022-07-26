@@ -22,11 +22,11 @@ const Reviews = (props) => {
     <div className='reviewCard'>
         <form onSubmit={handleSubmit}>
             <label htmlFor="type">Type of Issue:</label>
-            <select id="type" onChange={handleChange} value={formState.type}>
+            {/* <select id="type" onChange={handleChange} value={formState.type}>
             <option value="outage">Service Outage</option>
             <option value="billing">Billing</option>
             <option value="cancel">Cancel Service</option>
-            </select>
+            </select> */}
             <label htmlFor="subject">Subject:</label>
             <input
             type="text"
