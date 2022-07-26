@@ -31,7 +31,24 @@ app.get('/authors', async (req, res) => {
 
 /////////////////////////
 app.get('/reviews', reviewController.getAllReviews)
+app.post('/reviews', reviewController.createReview)
+app.delete('/reviews/:id', reviewController.deleteReview)
+app.put('/reviews/:id', reviewController.updateReview)
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
 })
+
+// {
+//     'name': 'test1',
+//     'manga': 'test1',
+//     'text': 'test1',
+//     'review': 'test1'
+//   }
+
+// {
+//         'name': 'updatetest1',
+//         'manga': 'updatetest1',
+//         'text': 'updatetest1',
+//         'review': 'updatetest1'
+//       }
