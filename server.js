@@ -31,6 +31,7 @@ app.get('/authors', async (req, res) => {
 
 /////////////////////////
 app.get('/reviews', reviewController.getAllReviews)
+// app.get('/reviews/:id', reviewController.getReviewById)
 app.post('/reviews', reviewController.createReview)
 app.delete('/reviews/:id', reviewController.deleteReview)
 app.put('/reviews/:id', reviewController.updateReview)

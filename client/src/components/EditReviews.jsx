@@ -2,12 +2,11 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import EditReviews from './EditReviews'
 
 const Reviews = (props) => {
     const [review, setReview] = useState([])
     const initialState = {
-        name: '',
+        name: review.name,
         manga: '',
         text: '',
         review: ''
@@ -18,11 +17,9 @@ const Reviews = (props) => {
     const getReview = async () => {
     const res = await axios.get(`http://localhost:3001/reviews`)
     setReview(res.data)
-    console.log(res.data.name)
     }
     useEffect(() => {
     getReview()
-    console.log(getReview)
     }, [])
 
     const handleChange = (event) => {
@@ -34,27 +31,22 @@ const Reviews = (props) => {
         event.preventDefault() 
         console.log(formState)
         
-        let res = await axios.post('http://localhost:3001/reviews', formState)
+        let res = await axios.post('http://localhost:3001/reviews/', formState)
         setFormState(initialState)
         getReview()
       }
 
-      const deleteReview = async (id) => {
+      const updateReview = async (id) => {
         
-        let res = await axios.delete(`http://localhost:3001/reviews/${id}`)
+        let res = await axios.put(`http://localhost:3001/reviews/${id}`)
         getReview()
       }
 
-
   return (
     <div className='reviewCard'>
+        <h1>{review.name}</h1>
         <form onSubmit={handleSubmit}>
-            {/* <label htmlFor="type">Type of Issue:</label> */}
-            {/* <select id="type" onChange={handleChange} value={formState.type}>
-            <option value="outage">Service Outage</option>
-            <option value="billing">Billing</option>
-            <option value="cancel">Cancel Service</option>
-            </select> */}
+           
             <label htmlFor="name">Your Name:</label>
             <input
             type="text"
@@ -76,7 +68,7 @@ const Reviews = (props) => {
             onChange={handleChange}
             value={formState.review}
             />
-            <label htmlFor="text">Leave your review here:</label>
+            <label htmlFor="text">Update your review here:</label>
             <textarea
             id="text"
             cols="30"
@@ -86,23 +78,7 @@ const Reviews = (props) => {
             ></textarea>
             <button type="submit">Submit Review!</button>
       </form>
-        <h1>Current Reviews:</h1>
-        {review.map((reviews) => {
-            return(
-            <div key={reviews._id}>
-                <h2>{reviews.name}</h2>
-                <h2>{reviews.manga}</h2>
-                <p>{reviews.text}</p>
-                <p>{reviews.review}</p>
-                <button onClick={()=>deleteReview(reviews._id)}>Delete Review</button>
-                <Link to='/editreviews'>
-                    
-                    Edit Review</Link>
-                {/* <button>Edit Review</button> */}
-            </div>
-            )
-})}
-        {/* <h1>{review.name}</h1> */}
+        
        
       </div>
     )
