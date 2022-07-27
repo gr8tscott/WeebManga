@@ -8,6 +8,7 @@ import Reviews from './components/Reviews'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import EditReviews from './components/EditReviews'
+import PageReader from './components/PageReader'
 import axios from 'axios'
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/mangas" element={<Mangas manga={manga} />} />
+          <Route path="/pagereader" element={<PageReader manga={manga} />} />
           <Route path="/authors" element={<Authors authors={authors} />} />
           <Route
             path="/reviews"

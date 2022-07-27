@@ -43,7 +43,7 @@ const EditReviews = (props) => {
   return (
     <div className='reviewCard'>
         {/* {props.reviewId?.map((review)=>())} */}
-        <h1>{props.reviews[index].name}</h1>
+        <h1>Edit your review here {props.reviews[index].name}</h1>
         <form onSubmit={handleSubmit}>
            
             <label htmlFor="name">Your Name:</label>
@@ -75,7 +75,7 @@ const EditReviews = (props) => {
             onChange={handleChange}
             value={formState.text}
             ></textarea>
-            <button type="submit">Submit Review!</button>
+            <button type="submit">Update Review!</button>
       </form>
         
        

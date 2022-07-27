@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams, Link } from 'react-router-dom'
 
 const Mangas = (props) => {
   return (
@@ -10,11 +11,13 @@ const Mangas = (props) => {
                   <img src={mangas.title_img}/>
                   <p>{mangas.description}</p>
                   {/* <img src={mangas.chapters} /> */}
-                  {mangas.chapters.map((pages) => (
+                  <h4>Want to read the first Chapter? Click <Link to={`/pagereader`}>
+                    HERE</Link></h4>
+                  {/* {mangas.chapters.map((pages) => (
                     <img src={pages} />
-                  ))}
+                  ))} */}
                   {/* {console.log(mangas.chapters)} */}
-                <h4>Want to read the first Chapter? Click <button>here</button></h4>
+                
                
             </div>
           ))
