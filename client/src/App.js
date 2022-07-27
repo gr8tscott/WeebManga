@@ -44,7 +44,7 @@ function App() {
           <Route path="/mangas" element={<Mangas manga={manga} />} />
           <Route path="/authors" element={<Authors authors={authors} />} />
           <Route path="/reviews" element={<Reviews />} />
-          <Route path="/editreviews" element={<EditReviews />} />
+          <Route path="/editreviews/:id" element={<EditReviews />} />
         </Routes>
       </main>
     </div>

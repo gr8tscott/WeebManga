@@ -2,11 +2,16 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 const Reviews = (props) => {
     const [review, setReview] = useState([])
+
+    let {id} = useParams(props.reviewId)
+    let navigate =useNavigate()
+
     const initialState = {
-        name: review.name,
+        name: '',
         manga: '',
         text: '',
         review: ''
@@ -14,13 +19,13 @@ const Reviews = (props) => {
     const [formState, setFormState] = useState(initialState)
     
 
-    const getReview = async () => {
-    const res = await axios.get(`http://localhost:3001/reviews`)
-    setReview(res.data)
-    }
-    useEffect(() => {
-    getReview()
-    }, [])
+    // const getReview = async () => {
+    // const res = await axios.get(`http://localhost:3001/reviews`)
+    // setReview(res.data)
+    // }
+    // useEffect(() => {
+    // getReview()
+    // }, [])
 
     const handleChange = (event) => {
         setFormState({ ...formState, [event.target.id]: event.target.value })
@@ -31,19 +36,21 @@ const Reviews = (props) => {
         event.preventDefault() 
         console.log(formState)
         
-        let res = await axios.post('http://localhost:3001/reviews/', formState)
+        let res = await axios.put(`http://localhost:3001/reviews/${id}`, formState)
         setFormState(initialState)
-        getReview()
+        navigate(`/reviews`)
+        // getReview()
       }
 
-      const updateReview = async (id) => {
+    //   const updateReview = async (id) => {
         
-        let res = await axios.put(`http://localhost:3001/reviews/${id}`)
-        getReview()
-      }
+    //     let res = await axios.put(`http://localhost:3001/reviews/${id}`)
+    //     // getReview()
+    //   }
 
   return (
     <div className='reviewCard'>
+        {/* {props.reviewId?.map((review)=>())} */}
         <h1>{review.name}</h1>
         <form onSubmit={handleSubmit}>
            

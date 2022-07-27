@@ -95,7 +95,7 @@ const Reviews = (props) => {
                 <p>{reviews.text}</p>
                 <p>{reviews.review}</p>
                 <button onClick={()=>deleteReview(reviews._id)}>Delete Review</button>
-                <Link to='/editreviews'>
+                <Link to={`/editreviews/${reviews._id}`} reviewId={reviews._id}>
                     
                     Edit Review</Link>
                 {/* <button>Edit Review</button> */}
