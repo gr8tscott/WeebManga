@@ -13,6 +13,7 @@ import axios from 'axios'
 function App() {
   const [manga, setManga] = useState([])
   const [authors, setAuthor] = useState([])
+  const [reviews, setReviews] = useState([])
 
   const getManga = async () => {
     const res = await axios.get(`http://localhost:3001/mangas`)
@@ -43,8 +44,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/mangas" element={<Mangas manga={manga} />} />
           <Route path="/authors" element={<Authors authors={authors} />} />
-          <Route path="/reviews" element={<Reviews />} />
-          <Route path="/editreviews/:id" element={<EditReviews />} />
+          <Route
+            path="/reviews"
+            element={<Reviews reviews={reviews} setReviews={setReviews} />}
+          />
+          <Route
+            path="/editreviews/:id/:index"
+            element={<EditReviews reviews={reviews} setReviews={setReviews} />}
+          />
         </Routes>
       </main>
     </div>

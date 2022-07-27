@@ -4,28 +4,21 @@ import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import {useNavigate} from 'react-router-dom'
 
-const Reviews = (props) => {
-    const [review, setReview] = useState([])
+const EditReviews = (props) => {
+    // const [review, setReview] = useState([])
 
-    let {id} = useParams(props.reviewId)
+    let {id, index} = useParams()
+    
     let navigate =useNavigate()
 
     const initialState = {
-        name: '',
-        manga: '',
-        text: '',
-        review: ''
+        name: props.reviews[index].name,
+        manga: props.reviews[index].manga,
+        text: props.reviews[index].text,
+        review: props.reviews[index].review
       }
     const [formState, setFormState] = useState(initialState)
     
-
-    // const getReview = async () => {
-    // const res = await axios.get(`http://localhost:3001/reviews`)
-    // setReview(res.data)
-    // }
-    // useEffect(() => {
-    // getReview()
-    // }, [])
 
     const handleChange = (event) => {
         setFormState({ ...formState, [event.target.id]: event.target.value })
@@ -34,7 +27,6 @@ const Reviews = (props) => {
       const handleSubmit = async (event) => {
         
         event.preventDefault() 
-        console.log(formState)
         
         let res = await axios.put(`http://localhost:3001/reviews/${id}`, formState)
         setFormState(initialState)
@@ -51,7 +43,7 @@ const Reviews = (props) => {
   return (
     <div className='reviewCard'>
         {/* {props.reviewId?.map((review)=>())} */}
-        <h1>{review.name}</h1>
+        <h1>{props.reviews[index].name}</h1>
         <form onSubmit={handleSubmit}>
            
             <label htmlFor="name">Your Name:</label>
@@ -91,5 +83,5 @@ const Reviews = (props) => {
     )
   }
 
-export default Reviews
+export default EditReviews
 

@@ -2,10 +2,9 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import EditReviews from './EditReviews'
 
 const Reviews = (props) => {
-    const [review, setReview] = useState([])
+   
     const initialState = {
         name: '',
         manga: '',
@@ -17,7 +16,7 @@ const Reviews = (props) => {
 
     const getReview = async () => {
     const res = await axios.get(`http://localhost:3001/reviews`)
-    setReview(res.data)
+    props.setReviews(res.data)
     console.log(res.data.name)
     }
     useEffect(() => {
@@ -87,15 +86,15 @@ const Reviews = (props) => {
             <button type="submit">Submit Review!</button>
       </form>
         <h1>Current Reviews:</h1>
-        {review.map((reviews) => {
+        {props.reviews.map((review, index) => {
             return(
-            <div key={reviews._id}>
-                <h2>{reviews.name}</h2>
-                <h2>{reviews.manga}</h2>
-                <p>{reviews.text}</p>
-                <p>{reviews.review}</p>
-                <button onClick={()=>deleteReview(reviews._id)}>Delete Review</button>
-                <Link to={`/editreviews/${reviews._id}`} reviewId={reviews._id}>
+            <div key={review._id}>
+                <h2>{review.name}</h2>
+                <h2>{review.manga}</h2>
+                <p>{review.text}</p>
+                <p>{review.review}</p>
+                <button onClick={()=>deleteReview(review._id)}>Delete Review</button>
+                <Link to={`/editreviews/${review._id}/${index}`}>
                     
                     Edit Review</Link>
                 {/* <button>Edit Review</button> */}
