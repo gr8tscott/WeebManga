@@ -39,7 +39,6 @@ const Reviews = (props) => {
       }
 
       const deleteReview = async (id) => {
-        
         let res = await axios.delete(`http://localhost:3001/reviews/${id}`)
         getReview()
       }

@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header className="nav">
         <Nav />
       </header>
       <main>

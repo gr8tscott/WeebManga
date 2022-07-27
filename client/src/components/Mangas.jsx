@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 
 const Mangas = (props) => {
   return (
-    <div className='mangaCard'>
+    <div className='card mangaCard'>
         {
           props.manga.map((mangas) => (
             <div className='manga-card' key={mangas._id}>
