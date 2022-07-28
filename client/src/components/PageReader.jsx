@@ -8,35 +8,54 @@ const PageReader = (props) => {
 
     let {id, index} = useParams()
 
+    let pageImage = props.mangas[index].chapters
+    // const nextBtn = () =>{
+    //     let chapterArr = pageImage[i]
+    //     let currentPage = 0
+    //     while (i < pageImage.length){
+
+    //     }
+    // }
+    let currentIndex = 0;
+
+
+    function next(){
+    move();
+    console.log("next button hit")
+    }
+
+    function previous(){
+    move(false);
+    }
+
+    function move(advance = true){
+    currentIndex = (currentIndex + (advance ? 1 : -1) + pageImage.length) % pageImage.length;
+    console.log(pageImage[currentIndex])
+    
+    //   pageImage[currentIndex]
+    }
+    // const nextButton=<img src= {props.mangas[index].chapters[0]}/>
+    // const backBtn = () =>{
+    //     let currentPage = 0
+    //     if ()
+    // }
+
     return (
       <div className='pageCard'>
         <div className='backButton'>
             <Link to="/mangas">Back to Manga list</Link>
+            </div>
             <div>
-                {props.mangas[index].chapters.map((pages) => (
-                      <img src={pages} />
-                    ))}
-                    </div>
-        </div>
-          {
-            // const chapter= ()=> {
-
-            // }
-            // <h3>{props.mangas.chapters}</h3>
-            // props.mangas.map((manga, index) => (
-            //   <div className='page-card' key={manga._id}>
-            //         <h3>{manga.title}</h3>
-                    
-            //         {/* <img src={mangas.chapters} /> */}
-            //         {manga.chapters.map((pages) => (
-            //           <img src={pages} />
-            //         ))}
-            //         {/* {console.log(mangas.chapters)} */}
+                <h2>{props.mangas[index].title}</h2>
+            <img className='fit' src= {pageImage[currentIndex]}/>
+                {/* {props.mangas[index].chapters.map((pages, index) => (
+                      <img src={pages[index]} />
+                    ))} */}
                 
-                 
-            //   </div>
-            // ))
-          }
+            </div>
+       
+        <button onClick={previous}>Back</button>
+        <button onClick={next}>Next</button>
         </div>
       )
     }
