@@ -1,14 +1,22 @@
 const mongoose = require('mongoose')
+require('dotenv').config() // Add this line
+
+let dbUrl =
+  process.env.NODE_ENV === 'production'
+    ? process.env.MONGODB_URI
+    : 'mongodb://127.0.0.1:27017/modelsDatabase'
 
 mongoose
-  .connect('mongodb://127.0.0.1:27017/modelsDatabase') // if we don't have a local database named "productsDatabase" one will be created upon a successful connection
+  .connect(dbUrl)
   .then(() => {
-    console.log('Successfully connected to MongoDB.')
+    console.log('Successfully connected to MongoDB!')
   })
   .catch((e) => {
     console.error('Connection error', e.message)
   })
-// mongoose.set('debug', true)
+mongoose.set('debug', true)
 const db = mongoose.connection
 
 module.exports = db
+
+// if we don't have a local database named "productsDatabase" one will be created upon a successful connection
