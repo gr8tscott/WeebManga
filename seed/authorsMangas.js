@@ -71,6 +71,42 @@ const main = async () => {
         'https://i.imgur.com/Od1YmgH.png'
       ],
       author: author2._id
+    },
+    {
+      title: 'Jujutsu-Kaisen',
+      title_img: 'https://i.imgur.com/tnHCUrl.jpg',
+      description: 'Fighting spirit monsters yo',
+      chapters: [
+        'https://i.imgur.com/LYM5sBS.png',
+        'https://i.imgur.com/iwyS1hN.png',
+        'https://i.imgur.com/eNoWC8K.png',
+        'https://i.imgur.com/uk9iOih.png',
+        'https://i.imgur.com/ExHRm7I.png',
+        'https://i.imgur.com/rOi4W0Y.png',
+        'https://i.imgur.com/EIrTtOx.png',
+        'https://i.imgur.com/wETTcyK.png',
+        'https://i.imgur.com/1JWKddl.png',
+        'https://i.imgur.com/7NzmDbU.png',
+        'https://i.imgur.com/nB4H2lo.png',
+        'https://i.imgur.com/0OSZ64i.png',
+        'https://i.imgur.com/1strckj.png',
+        'https://i.imgur.com/ymVoCL1.png',
+        'https://i.imgur.com/9u5S5mR.png',
+        'https://i.imgur.com/zK80ccO.png',
+        'https://i.imgur.com/gYipC9V.png',
+        'https://i.imgur.com/0m6oyJm.png',
+        'https://i.imgur.com/AGWYwwN.png',
+        'https://i.imgur.com/KQaSuZQ.png',
+        'https://i.imgur.com/IZIJjKI.png',
+        'https://i.imgur.com/XvIp5lw.png',
+        'https://i.imgur.com/3q8SftU.png',
+        'https://i.imgur.com/V8a8lex.png',
+        'https://i.imgur.com/Q7TIrAv.png',
+        'https://i.imgur.com/q0Aex67.png',
+        'https://i.imgur.com/08cgtJc.png',
+        'https://i.imgur.com/yC4IuEZ.png'
+      ],
+      author: author2._id
     }
   ]
 
