@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
 .nav{
   display: flex;
   justify-content: flex-end;
@@ -56,6 +58,10 @@
 
 .backButton{
   padding-top: 5vh;
+}
+
+.deletebutton{
+  margin: 10px;
 }
 
 .leftbanner{
@@ -145,7 +151,8 @@
   grid-template-columns: 50% 50%;
   grid-template-rows:50% 50%; */
 }
-mangaCard{
+
+.mangaCard{
   
 }
 .card:hover {
