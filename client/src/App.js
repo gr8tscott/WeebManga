@@ -15,6 +15,7 @@ function App() {
   const [mangas, setMangas] = useState([])
   const [authors, setAuthor] = useState([])
   const [reviews, setReviews] = useState([])
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const getManga = async () => {
     const res = await axios.get(`http://localhost:3001/mangas`)
@@ -50,7 +51,13 @@ function App() {
           <Route path="/mangas" element={<Mangas mangas={mangas} />} />
           <Route
             path="/pagereader/:id/:index"
-            element={<PageReader mangas={mangas} />}
+            element={
+              <PageReader
+                mangas={mangas}
+                currentIndex={currentIndex}
+                setCurrentIndex={setCurrentIndex}
+              />
+            }
           />
           <Route path="/authors" element={<Authors authors={authors} />} />
           <Route

@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 
 const PageReader = (props) => {
 
+
     let {id, index} = useParams()
 
     let pageImage = props.mangas[index].chapters
@@ -16,7 +17,6 @@ const PageReader = (props) => {
 
     //     }
     // }
-    let currentIndex = 0;
 
 
     function next(){
@@ -29,9 +29,9 @@ const PageReader = (props) => {
     }
 
     function move(advance = true){
-    currentIndex = (currentIndex + (advance ? 1 : -1) + pageImage.length) % pageImage.length;
-    console.log(pageImage[currentIndex])
-    
+    let tempIndex = (props.currentIndex + (advance ? 1 : -1) + pageImage.length) % pageImage.length;
+    console.log(pageImage[props.currentIndex])
+    props.setCurrentIndex(tempIndex)
     //   pageImage[currentIndex]
     }
     // const nextButton=<img src= {props.mangas[index].chapters[0]}/>
@@ -47,7 +47,7 @@ const PageReader = (props) => {
             </div>
             <div>
                 <h2>{props.mangas[index].title}</h2>
-            <img className='fit' src= {pageImage[currentIndex]}/>
+            <img className='fit' src= {pageImage[props.currentIndex]}/>
                 {/* {props.mangas[index].chapters.map((pages, index) => (
                       <img src={pages[index]} />
                     ))} */}
