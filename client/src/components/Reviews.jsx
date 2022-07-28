@@ -47,44 +47,46 @@ const Reviews = (props) => {
   return (
     <div className='reviewCard'>
         <form onSubmit={handleSubmit}>
-            {/* <label htmlFor="type">Type of Issue:</label>
-            <select id="type" onChange={handleChange} value={formState.type}>
-            <option value="outage">props.</option>
-            <option value="billing">Billing</option>
-            <option value="cancel">Cancel Service</option>
-            </select> */}
-
-            <label htmlFor="name">Your Name:</label>
-            <input
-            type="text"
-            id="name"
-            onChange={handleChange}
-            value={formState.name}
-            />
             <label htmlFor="manga">Manga:</label>
-            <input
-            type="text"
-            id="manga"
-            onChange={handleChange}
-            value={formState.manga}
-            />
+            <select id="manga" onChange={handleChange} value={formState.manga}>
+                <option value="blank" >dsfds</option>
+        
+                {props.mangas.map((manga, index)=>
+                <option value="manga name" key={index}>{manga.title}</option>
+        )}
+            </select>
+            {/* <label htmlFor="manga">Manga:</label>
+                <input
+                type="text"
+                id="manga"
+                onChange={handleChange}
+                value={formState.manga}
+                /> */}
+            <label htmlFor="name">Your Name:</label>
+                <input
+                type="text"
+                id="name"
+                onChange={handleChange}
+                value={formState.name}
+                />
+            
             <label htmlFor="review">Rating (1-10):</label>
-            <input
-            type="number"
-            id="review"
-            min="0"
-            max="10"
-            onChange={handleChange}
-            value={formState.review}
-            />
+                <input
+                type="number"
+                id="review"
+                min="0"
+                max="10"
+                onChange={handleChange}
+                value={formState.review}
+                />
             <label htmlFor="text">Leave your review here:</label>
-            <textarea
-            id="text"
-            cols="30"
-            rows="10"
-            onChange={handleChange}
-            value={formState.text}
-            ></textarea>
+                <textarea
+                id="text"
+                cols="30"
+                rows="10"
+                onChange={handleChange}
+                value={formState.text}
+                ></textarea>
             <button type="submit">Submit Review!</button>
       </form>
         <h1>Current Reviews:</h1>

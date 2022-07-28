@@ -38,9 +38,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className="leftbanner"></div>
-      <div className="rightbanner"></div>
-      <div className="bannerimage"></div>
+      <div className="bannerimage">
+        <div className="leftbanner"></div>
+        <div className="rightbanner"></div>
+      </div>
 
       <header className="nav">
         <Nav />
@@ -62,7 +63,13 @@ function App() {
           <Route path="/authors" element={<Authors authors={authors} />} />
           <Route
             path="/reviews"
-            element={<Reviews reviews={reviews} setReviews={setReviews} />}
+            element={
+              <Reviews
+                reviews={reviews}
+                setReviews={setReviews}
+                mangas={mangas}
+              />
+            }
           />
           <Route
             path="/editreviews/:id/:index"
