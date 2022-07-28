@@ -37,7 +37,10 @@ function App() {
 
   return (
     <div className="App">
+      <div className="leftbanner"></div>
+      <div className="rightbanner"></div>
       <div className="bannerimage"></div>
+
       <header className="nav">
         <Nav />
       </header>
