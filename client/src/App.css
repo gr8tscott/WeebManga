@@ -45,6 +45,16 @@
 .backButton{
   padding-top: 5vh;
 }
+
+.bannerimage{
+  width: 100%;
+  background-image: url(https://i.imgur.com/Ej6G8jV.png);
+  height: 10vh;
+  background-color: purple;
+  background-position: center;
+}
+
+
 .App {
   text-align: center;
 }
