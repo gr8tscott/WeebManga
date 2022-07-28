@@ -53,9 +53,10 @@ const PageReader = (props) => {
                     ))} */}
                 
             </div>
-       
+            <div className='nextBack'>
+       <button onClick={next}>Next</button>
         <button onClick={previous}>Back</button>
-        <button onClick={next}>Next</button>
+        </div>
         </div>
       )
     }

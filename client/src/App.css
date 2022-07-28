@@ -72,6 +72,13 @@ nav{
   right: 10%
 }
 
+.nextBack button{
+  color: white;
+  background-color: red;
+  margin: 1em;
+  font-size: medium;
+}
+
 .container{
   border-spacing: 25%;
 }
