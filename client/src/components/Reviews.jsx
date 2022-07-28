@@ -49,10 +49,10 @@ const Reviews = (props) => {
         <form onSubmit={handleSubmit}>
             <label htmlFor="manga">Manga:</label>
             <select id="manga" onChange={handleChange} value={formState.manga}>
-                <option value="blank" >dsfds</option>
+                <option value="blank" >---------</option>
         
                 {props.mangas.map((manga, index)=>
-                <option value="manga name" key={index}>{manga.title}</option>
+                <option value={manga.title} key={index}>{manga.title}</option>
         )}
             </select>
             {/* <label htmlFor="manga">Manga:</label>
