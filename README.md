@@ -49,9 +49,9 @@ A manga reading application
 
 ### **_Future Updates_**
 
-- []
-- []
-- []
+- [] Add author bios and link to manga written
+- [] Connect to a manga API
+- [] Add anime watching option
 - []
 
 ### **_Credits_**

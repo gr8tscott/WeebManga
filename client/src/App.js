@@ -1,5 +1,4 @@
 import './App.css'
-import './App.css'
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Authors from './components/Authors'
@@ -82,3 +81,6 @@ function App() {
 }
 
 export default App
+
+// mongoDB linkV
+// mongodb+srv://masc6977:<1234>@weebmanga.iyl9t.mongodb.net/?retryWrites=true&w=majority

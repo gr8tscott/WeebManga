@@ -5,7 +5,7 @@ import React from 'react'
 const Nav = () => {
 return (
       <header>
-        <nav>
+        <nav className='navSpace'>
           <Link to=''>Home</Link>
           <Link to='/mangas'>Manga</Link>
           <Link to='/authors'>Authors</Link>
