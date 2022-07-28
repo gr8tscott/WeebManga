@@ -12,13 +12,13 @@ import PageReader from './components/PageReader'
 import axios from 'axios'
 
 function App() {
-  const [manga, setManga] = useState([])
+  const [mangas, setMangas] = useState([])
   const [authors, setAuthor] = useState([])
   const [reviews, setReviews] = useState([])
 
   const getManga = async () => {
     const res = await axios.get(`http://localhost:3001/mangas`)
-    setManga(res.data)
+    setMangas(res.data)
   }
   useEffect(() => {
     getManga()
@@ -43,8 +43,11 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/mangas" element={<Mangas manga={manga} />} />
-          <Route path="/pagereader" element={<PageReader manga={manga} />} />
+          <Route path="/mangas" element={<Mangas mangas={mangas} />} />
+          <Route
+            path="/pagereader/:id/:index"
+            element={<PageReader mangas={mangas} />}
+          />
           <Route path="/authors" element={<Authors authors={authors} />} />
           <Route
             path="/reviews"

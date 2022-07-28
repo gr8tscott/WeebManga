@@ -47,12 +47,13 @@ const Reviews = (props) => {
   return (
     <div className='reviewCard'>
         <form onSubmit={handleSubmit}>
-            {/* <label htmlFor="type">Type of Issue:</label> */}
-            {/* <select id="type" onChange={handleChange} value={formState.type}>
-            <option value="outage">Service Outage</option>
+            {/* <label htmlFor="type">Type of Issue:</label>
+            <select id="type" onChange={handleChange} value={formState.type}>
+            <option value="outage">props.</option>
             <option value="billing">Billing</option>
             <option value="cancel">Cancel Service</option>
             </select> */}
+
             <label htmlFor="name">Your Name:</label>
             <input
             type="text"
@@ -67,10 +68,12 @@ const Reviews = (props) => {
             onChange={handleChange}
             value={formState.manga}
             />
-            <label htmlFor="review">Rating 1-10:</label>
+            <label htmlFor="review">Rating (1-10):</label>
             <input
-            type="text"
+            type="number"
             id="review"
+            min="0"
+            max="10"
             onChange={handleChange}
             value={formState.review}
             />

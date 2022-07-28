@@ -3,15 +3,15 @@ import { useParams, Link } from 'react-router-dom'
 
 const Mangas = (props) => {
   return (
-    <div className='card mangaCard'>
+    <div className='manga-grid'>
         {
-          props.manga.map((mangas) => (
-            <div className='manga-card' key={mangas._id}>
-                  <h3>{mangas.title}</h3>
-                  <img src={mangas.title_img}/>
-                  <p>{mangas.description}</p>
+          props.mangas.map((manga, index) => (
+            <div className='manga-card' key={manga._id}>
+                  <h3>{manga.title}</h3>
+                  <img src={manga.title_img}/>
+                  <p>{manga.description}</p>
                   {/* <img src={mangas.chapters} /> */}
-                  <h4>Want to read the first Chapter? Click <Link to={`/pagereader`}>
+                  <h4>Want to read the first Chapter? Click <Link to={`/pagereader/${manga._id}/${index}`}>
                     HERE</Link></h4>
                   {/* {mangas.chapters.map((pages) => (
                     <img src={pages} />
