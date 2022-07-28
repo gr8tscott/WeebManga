@@ -4,7 +4,11 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 5vw;
-  
+}
+nav{
+  display:flex;
+  justify-content: space-around;
+  padding-right: ;
 }
 
 .manga-grid{
@@ -39,6 +43,10 @@
 .container{
   border-spacing: 25%;
 }
+
+/* .form{
+
+} */
 
 .reviewCards{
   border:rgb(0, 0, 0);

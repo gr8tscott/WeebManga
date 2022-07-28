@@ -9,7 +9,7 @@ const Mangas = (props) => {
             <div className='manga-card' key={manga._id}>
                   <h3>{manga.title}</h3>
                   <img src={manga.title_img}/>
-                  <p>{manga.description}</p>
+                  {/* <p>{manga.description}</p> */}
                   {/* <img src={mangas.chapters} /> */}
                   <h4>Want to read the first Chapter? Click <Link to={`/pagereader/${manga._id}/${index}`}>
                     HERE</Link></h4>
