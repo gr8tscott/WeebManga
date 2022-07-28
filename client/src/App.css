@@ -3,12 +3,15 @@
 .nav{
   display: flex;
   justify-content: flex-end;
-  padding-right: 5vw;
+  padding-right: 15vw;
 }
 nav{
   display:flex;
   justify-content: space-around;
-  padding-right: ;
+  /* position: absolute; */
+  /* left: 10%; */
+  right: 20%;
+  color: green;
 }
 
 .manga-grid{
@@ -17,6 +20,9 @@ nav{
   /* flex-direction: column; */
   justify-content: space-around;
   border-width: thick;
+  position: absolute;
+  left: 10%;
+  right: 10%
 }
 
 .manga-card{
@@ -38,21 +44,40 @@ nav{
   object-fit: center;
   box-shadow: inset 0 0 1em rgb(0, 0, 0);
   transform: scale(1.01);
+  /* position: absolute;
+  left: 10%; */
 }
 
 .container{
   border-spacing: 25%;
 }
 
-/* .form{
-
-} */
+.form{
+margin-top: 5vh;
+margin-left: 15vw;
+  margin-right: 15vw;
+  /* display: flex;
+  flex-direction: column; */
+  
+}
+.reviewInputs{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: right; */
+}
+.reviewText{
+  display: flex;
+  flex-direction: column;
+}
 
 .reviewCards{
   border:rgb(0, 0, 0);
   border-style: solid;
   border-width: 5px;
-  margin: 1vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-bottom: 2vw;
 }
 
 .fit {
@@ -79,37 +104,37 @@ nav{
   background-color: purple;
   background-position: center;
 }
-/* 
+
 .leftbanner{
-  /* width: 10vh; */
-  /* background-image: url(https://i.imgur.com/YXCtHvf.png); */
-  /* height: 100%;
+  width: 10vh;
+  background-image: url(https://i.imgur.com/YXCtHvf.png);
+  height: 100%;
   background-color: purple;
-  background-position: left; */
-  /* height: 100%;
+  background-position: left;
+  height: 100%;
   width: 10vw;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
-  overflow-x: hidden; */
-/* } */
+  overflow-x: hidden;
+}
 
-/* 
+
 .rightbanner{
-  /* width: 10vh; */
-  /* background-image: url(https://i.imgur.com/YXCtHvf.png); */
-  /* height: 100%;
+  width: 10vh;
+  background-image: url(https://i.imgur.com/YXCtHvf.png);
+  height: 100%;
   background-color: purple;
-  background-position: left; */
-  /* height: 100%;
+  background-position: left;
+  height: 100%;
   width: 10vw;
-  position:fixed;
+  position:absolute;
   z-index: 1;
   top: 0;
   right: 0;
-  overflow-x: hidden; */
-/* } */ 
+  overflow-x: hidden;
+} 
 
 
 .App {

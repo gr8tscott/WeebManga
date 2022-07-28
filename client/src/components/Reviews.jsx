@@ -46,7 +46,9 @@ const Reviews = (props) => {
 
   return (
     <div className='reviewCard'>
+        
         <form className='form' onSubmit={handleSubmit}>
+        <div className='reviewInputs'>
             <label htmlFor="manga">Manga:</label>
             <select id="manga" onChange={handleChange} value={formState.manga}>
                 <option value="blank" >---------</option>
@@ -62,6 +64,7 @@ const Reviews = (props) => {
                 onChange={handleChange}
                 value={formState.manga}
                 /> */}
+                
             <label htmlFor="name">Your Name:</label>
                 <input
                 type="text"
@@ -79,6 +82,8 @@ const Reviews = (props) => {
                 onChange={handleChange}
                 value={formState.review}
                 />
+                </div>
+                <div className='reviewText'>
             <label htmlFor="text">Leave your review here:</label>
                 <textarea
                 id="text"
@@ -87,6 +92,7 @@ const Reviews = (props) => {
                 onChange={handleChange}
                 value={formState.text}
                 ></textarea>
+                </div>
             <button type="submit">Submit Review!</button>
       </form>
         <h1>Current Reviews:</h1>
