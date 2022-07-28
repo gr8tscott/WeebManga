@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
-const authorSchema = require('./Author')
-const mangaSchema = require('./Manga')
-const reviewSchema = require('./Review')
+const authorSchema = require('./author')
+const mangaSchema = require('./manga')
+const reviewSchema = require('./review')
 
 const Author = mongoose.model('Author', authorSchema)
 const Manga = mongoose.model('Manga', mangaSchema)
