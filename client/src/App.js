@@ -44,7 +44,7 @@ function App() {
       <header className="nav">
         <Nav />
       </header>
-      <main>
+      <main className="container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/mangas" element={<Mangas mangas={mangas} />} />
