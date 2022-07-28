@@ -2,7 +2,7 @@ import React from 'react'
 
 const Authors = (props) => {
   return (
-    <div className='mangaCard'>
+    <div className='author-grid'>
         {
           props.authors.map((author) => (
             <div className='manga-card' key={author.id}>
