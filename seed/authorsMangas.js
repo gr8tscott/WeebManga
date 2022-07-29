@@ -8,7 +8,7 @@ const main = async () => {
   //   Manga.collection.drop()
   const author1 = await new Author({
     name: 'Masashi Kishimoto',
-    works_created: ['Naruto', 'One Punch Man'],
+    works_created: ['Naruto'],
     image: 'https://cdn.myanimelist.net/images/voiceactors/2/42365.jpg'
   })
   author1.save()
@@ -109,7 +109,7 @@ const main = async () => {
         'https://i.imgur.com/3ragVe1.png',
         'https://i.imgur.com/pcvjxPC.png'
       ],
-      author: author1._id
+      author: author3._id
     },
     {
       title: 'One Piece',
@@ -173,7 +173,7 @@ const main = async () => {
         'https://i.imgur.com/mrZL804.png',
         'https://i.imgur.com/7yLxcPp.png'
       ],
-      author: author2._id
+      author: author4._id
     },
     {
       title: 'Jujutsu-Kaisen',
@@ -209,7 +209,7 @@ const main = async () => {
         'https://i.imgur.com/08cgtJc.png',
         'https://i.imgur.com/yC4IuEZ.png'
       ],
-      author: author2._id
+      author: author5._id
     },
     {
       title: 'My Hero Academia',
@@ -241,7 +241,7 @@ const main = async () => {
         'https://i.imgur.com/EoEaCj6.png',
         'https://i.imgur.com/Se4RKnE.png'
       ],
-      author: author2._id
+      author: author6._id
     }
   ]
 
