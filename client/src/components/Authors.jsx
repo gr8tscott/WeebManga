@@ -7,7 +7,7 @@ const Authors = (props) => {
           props.authors.map((author) => (
             <div className='manga-card' key={author.id}>
                   <h3>{author.name}</h3>
-                  {/* <img src={author.title_img}/> */}
+                  <img src={author.image}/>
                   <p>{author.works_created}</p>
                 
               {/* {food.meals.map((meal)=> (

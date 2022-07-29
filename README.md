@@ -30,7 +30,7 @@ A manga reading application
 
 ### **_Technologies Used_**
 
-##### HTML, CSS, JavaScript, React, MongoDB, Atlas, and Heroku
+##### HTML, CSS, JavaScript, React.js, MongoDB, Express, Node.js, Mongo Atlas, and Heroku
 
 ---
 
@@ -50,6 +50,12 @@ A manga reading application
 
 ### **_Credits_**
 
-##### Manga pages from [viz](https://www.viz.com/)
+##### Manga pages from [Viz](https://www.viz.com/)
 
 ##### Image links made easy by [imgur](https://imgur.com/)
+
+##### Component Heirarchy Diagram [Draw.io](https://app.diagrams.net/)
+
+##### Entity Relationship Diagram [Draw.io](https://app.diagrams.net/?libs=general;er)
+
+##### Deployment by [Heroku](https://dashboard.heroku.com/) and [Mongo Atlas](https://www.mongodb.com/atlas/database)

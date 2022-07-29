@@ -7,16 +7,51 @@ const main = async () => {
   //   Author.collection.drop()
   //   Manga.collection.drop()
   const author1 = await new Author({
-    name: 'Apple',
-    works_created: ['Naruto', 'One Punch Man']
+    name: 'Masashi Kishimoto',
+    works_created: ['Naruto', 'One Punch Man'],
+    image: 'https://cdn.myanimelist.net/images/voiceactors/2/42365.jpg'
   })
   author1.save()
 
   const author2 = await new Author({
-    name: 'Vespa',
-    works_created: ['One Piece', 'HunterXHunter']
+    name: 'Eiichiro Oda',
+    works_created: ['One Piece', 'Wanted!', 'Monsters'],
+    image: 'https://pbs.twimg.com/media/EfBD-KIUcAA47cC.jpg'
   })
   author2.save()
+
+  const author3 = await new Author({
+    name: 'Yusuke Murata',
+    works_created: ['One Punch Man', 'Eyeshield 21', 'Monster of Earth'],
+    image: 'https://i.imgur.com/yWh3wA6.jpg'
+  })
+  author3.save()
+
+  const author4 = await new Author({
+    name: 'Yoshihiro Togashi',
+    works_created: [
+      'Hunter X Hunter',
+      'YuYu Hakasho',
+      'Ten de Shōwaru Cupid',
+      'Level E'
+    ],
+    image: 'https://i.imgur.com/a83PXM8.jpg'
+  })
+  author4.save()
+
+  const author5 = await new Author({
+    name: 'Gege Akutami',
+    works_created: ['Jujutsu Kaisen'],
+    image: 'https://i.imgur.com/Rp6u2mN.jpg?1'
+  })
+  author5.save()
+
+  const author6 = await new Author({
+    name: 'Kōhei Horikoshi',
+    works_created: ['My Hero Academia', 'Oumagadoki Zoo', 'Barrage'],
+    image: 'https://i.imgur.com/vy9p1Mb.jpg'
+  })
+  author6.save()
 
   const manga = [
     {
@@ -215,10 +250,22 @@ const main = async () => {
 
   const review = [
     {
-      name: 'test',
-      manga: 'test',
-      text: 'test',
-      review: 'test'
+      name: 'eatsleepmanga1900',
+      manga: 'One Piece',
+      text: 'This is the longest running manga series and is amazing, would recommend!',
+      review: '10'
+    },
+    {
+      name: 'mangalvr82',
+      manga: 'Jujutsu Kaisen',
+      text: 'I wish my school taught me how to kill spirit monsters',
+      review: '8'
+    },
+    {
+      name: 'froppy432',
+      manga: 'Jujutsu Kaisen',
+      text: 'This shows power level is over 9000!!!!',
+      review: '10'
     }
   ]
 
