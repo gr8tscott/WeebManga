@@ -68,7 +68,20 @@ const main = async () => {
         'https://i.imgur.com/nHjreAh.png',
         'https://i.imgur.com/XgRHykH.png',
         'https://i.imgur.com/LIaqmUh.png',
-        'https://i.imgur.com/Od1YmgH.png'
+        'https://i.imgur.com/Od1YmgH.png',
+        'https://i.imgur.com/4vX2UBZ.png',
+        'https://i.imgur.com/GaqtL69.png',
+        'https://i.imgur.com/g6Vyenk.png',
+        'https://i.imgur.com/NKuKvSk.png',
+        'https://i.imgur.com/vVjzLgJ.png',
+        'https://i.imgur.com/bUBHiac.png',
+        'https://i.imgur.com/lZfkzCU.png',
+        'https://i.imgur.com/8UF4jBk.png',
+        'https://i.imgur.com/Gzsq7Xc.png',
+        'https://i.imgur.com/PKGmLdq.png',
+        'https://i.imgur.com/FMVzxlE.png',
+        'https://i.imgur.com/mrZL804.png',
+        'https://i.imgur.com/7yLxcPp.png'
       ],
       author: author2._id
     },
