@@ -20,30 +20,24 @@ A manga reading application
 
 ---
 
-### **_Component Heirarchy and ERD_**
-
-![ComponentHeirarchy](CH.png)
-![ERD](ERD.png)
-
----
-
 ### **_Getting Started_**
 
 #####
 
-##### You can check out the project [here]() on surge.
+##### You can check out the project [here](https://weebmanga.herokuapp.com/) on heroku.
 
 ---
 
 ### **_Technologies Used_**
 
-#####
+##### HTML, CSS, JavaScript, React, MongoDB, Atlas, and Heroku
 
 ---
 
 ### **_Screenshots_**
 
-<!-- ![Screenshot]() -->
+![MangaPageScreenshot](https://i.imgur.com/vu3sMIm.png)
+![PageReaderScreenshot](https://i.imgur.com/Aaqt5IV.png)
 
 ---
 
@@ -52,8 +46,10 @@ A manga reading application
 - [] Add author bios and link to manga written
 - [] Connect to a manga API
 - [] Add anime watching option
-- []
+- [] Star rating display on manga cards
 
 ### **_Credits_**
 
-#####
+##### Manga pages from [viz](https://www.viz.com/)
+
+##### Image links made easy by [imgur](https://imgur.com/)
