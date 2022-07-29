@@ -56,6 +56,10 @@ nav{
   max-height: 436px;
 }
 
+.homePage{
+  margin-top: 20%;
+}
+
 .manga-card{
   display: flex;
   flex-direction: column;

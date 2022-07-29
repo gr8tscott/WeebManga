@@ -14,15 +14,9 @@ A manga reading application
 
 ### **_Description_**
 
-#### WeebManga is an application you can use to browse and read your favorite manga by your favorite authors.
+#### WeebManga is an application you can use to browse and read your favorite manga by your favorite authors and write reviews.
 
-<!-- #### This was a project I made in less than a week after just learning about HTML, JavaScript, and CSS. -->
-
----
-
-### **_Getting Started_**
-
-#####
+##### Each manga has the complete first chapter available in English translation to read through (from right to left) and enjoy.
 
 ##### You can check out the project [here](https://weebmanga.herokuapp.com/) on heroku.
 
