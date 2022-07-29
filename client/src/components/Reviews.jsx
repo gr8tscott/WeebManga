@@ -15,7 +15,7 @@ const Reviews = (props) => {
     
 
     const getReview = async () => {
-    const res = await axios.get(`http://localhost:3001/reviews`)
+    const res = await axios.get(`/reviews`)
     props.setReviews(res.data)
     console.log(res.data.name)
     }
@@ -33,13 +33,13 @@ const Reviews = (props) => {
         event.preventDefault() 
         console.log(formState)
         
-        let res = await axios.post('http://localhost:3001/reviews', formState)
+        let res = await axios.post('/reviews', formState)
         setFormState(initialState)
         getReview()
       }
 
       const deleteReview = async (id) => {
-        let res = await axios.delete(`http://localhost:3001/reviews/${id}`)
+        let res = await axios.delete(`/reviews/${id}`)
         getReview()
       }
 
@@ -57,13 +57,7 @@ const Reviews = (props) => {
                 <option value={manga.title} key={index}>{manga.title}</option>
         )}
             </select>
-            {/* <label htmlFor="manga">Manga:</label>
-                <input
-                type="text"
-                id="manga"
-                onChange={handleChange}
-                value={formState.manga}
-                /> */}
+            
                 
             <label htmlFor="name">Your Name:</label>
                 <input

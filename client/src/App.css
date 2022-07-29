@@ -5,7 +5,7 @@ body{
    background-size: cover;
    height:1000%;
    background-attachment:fixed;
-  /* background-color: rgb(83, 175, 228); */
+  
 }
 
 .nav{
@@ -30,8 +30,7 @@ header{
 nav{
   display:flex;
   justify-content: space-around;
-  /* position: absolute; */
-  /* left: 10%; */
+  
   right: 20%;
   color: green;
 }
@@ -47,7 +46,7 @@ nav{
 .manga-grid{
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
+  
   justify-content: space-around;
   border-width: thick;
   position: absolute;
@@ -71,23 +70,20 @@ nav{
   margin: 1em;
   justify-content: space-around;
   box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
-  /* color: white; */
+  
   font-family: 'Georgia';
   cursor: pointer;
-  /* width: 100%;
-  height: 10em; */
+ 
   object-fit: center;
   box-shadow: inset 0 0 1em rgb(0, 0, 0);
   transform: scale(1.01);
-  
-  /* position: absolute;
-  left: 10%; */
+ 
 }
 
 .author-grid{
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
+  
   justify-content: space-around;
   border-width: thick;
   position: absolute;
@@ -110,8 +106,6 @@ nav{
 margin-top: 5vh;
 margin-left: 15vw;
   margin-right: 15vw;
-  /* display: flex;
-  flex-direction: column; */
   
 }
 .reviewInputs{
@@ -119,7 +113,7 @@ margin-left: 15vw;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* justify-content: right; */
+  
   margin: 1em;
 }
 .reviewText{
@@ -163,9 +157,9 @@ margin-left: 15vw;
 }
 
 .leftbanner{
-  /* width: 10vh; */
+ 
   background-image: url(https://i.imgur.com/YXCtHvf.png);
-  /* height: 100%; */
+  
   background-color: purple;
   background-position: left;
   height: 1000%;
@@ -180,9 +174,9 @@ margin-left: 15vw;
 
 
 .rightbanner{
-  /* width: 10vh; */
+  
   background-image: url(https://i.imgur.com/YXCtHvf.png);
-  /* height: 100%; */
+  
   background-color: purple;
   background-position: left;
   height: 1000%;
@@ -192,7 +186,7 @@ margin-left: 15vw;
   top: 0;
   right: 0;
   overflow-x: hidden;
-  /* background-repeat:repeat-x; */
+ 
   background-attachment:fixed;
 
 } 
@@ -237,7 +231,7 @@ margin-left: 15vw;
   }
 }
 
-/*  */
+
 .card {
   max-width: 250px;
   max-height: 380px;
@@ -245,9 +239,7 @@ margin-left: 15vw;
   background-color: #1b1b1b;
   cursor: pointer;
   transition: all 0.2s;
-  /* display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows:50% 50%; */
+
 }
 
 

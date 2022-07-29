@@ -17,7 +17,7 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const getManga = async () => {
-    const res = await axios.get(`http://localhost:3001/mangas`)
+    const res = await axios.get(`/mangas`)
     setMangas(res.data)
   }
   useEffect(() => {
@@ -26,7 +26,7 @@ function App() {
   }, [])
 
   const getAuthor = async () => {
-    const res = await axios.get(`http://localhost:3001/authors`)
+    const res = await axios.get(`/authors`)
     setAuthor(res.data)
   }
   //npm i concurrently

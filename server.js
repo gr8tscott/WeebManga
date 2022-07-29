@@ -19,7 +19,6 @@ app.get('/', (req, res) => {
   res.send('This is root!')
 })
 
-// server.js
 app.get('/mangas', mangaController.getAllMangas)
 
 app.get('/mangas/:id', mangaController.getMangaById)

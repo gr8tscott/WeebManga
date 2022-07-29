@@ -10,13 +10,7 @@ const PageReader = (props) => {
     let {id, index} = useParams()
 
     let pageImage = props.mangas[index].chapters
-    // const nextBtn = () =>{
-    //     let chapterArr = pageImage[i]
-    //     let currentPage = 0
-    //     while (i < pageImage.length){
-
-    //     }
-    // }
+   
 
 
     function next(){
@@ -32,13 +26,9 @@ const PageReader = (props) => {
     let tempIndex = (props.currentIndex + (advance ? 1 : -1) + pageImage.length) % pageImage.length;
     console.log(pageImage[props.currentIndex])
     props.setCurrentIndex(tempIndex)
-    //   pageImage[currentIndex]
+    
     }
-    // const nextButton=<img src= {props.mangas[index].chapters[0]}/>
-    // const backBtn = () =>{
-    //     let currentPage = 0
-    //     if ()
-    // }
+    
 
     return (
       <div className='pageCard'>
@@ -48,9 +38,7 @@ const PageReader = (props) => {
             <div>
                 <h2>{props.mangas[index].title}</h2>
             <img className='fit' src= {pageImage[props.currentIndex]}/>
-                {/* {props.mangas[index].chapters.map((pages, index) => (
-                      <img src={pages[index]} />
-                    ))} */}
+                
                 
             </div>
             <div className='nextBack'>

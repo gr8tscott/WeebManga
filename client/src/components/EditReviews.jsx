@@ -28,21 +28,15 @@ const EditReviews = (props) => {
         
         event.preventDefault() 
         
-        let res = await axios.put(`http://localhost:3001/reviews/${id}`, formState)
+        let res = await axios.put(`/reviews/${id}`, formState)
         setFormState(initialState)
         navigate(`/reviews`)
-        // getReview()
+        
       }
 
-    //   const updateReview = async (id) => {
-        
-    //     let res = await axios.put(`http://localhost:3001/reviews/${id}`)
-    //     // getReview()
-    //   }
 
   return (
     <div className='reviewCard'>
-        {/* {props.reviewId?.map((review)=>())} */}
         <h1>Edit your review here {props.reviews[index].name}</h1>
         <form onSubmit={handleSubmit}>
            
