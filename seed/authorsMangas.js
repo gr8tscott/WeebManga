@@ -107,6 +107,38 @@ const main = async () => {
         'https://i.imgur.com/yC4IuEZ.png'
       ],
       author: author2._id
+    },
+    {
+      title: 'My Hero Academia',
+      title_img: 'https://i.imgur.com/VgSf1pa.jpg',
+      description: 'Have no fear, I am here',
+      chapters: [
+        'https://i.imgur.com/zthFyoR.png',
+        'https://i.imgur.com/MRTqnbU.png',
+        'https://i.imgur.com/ueKvCZT.png',
+        'https://i.imgur.com/eM3sl6p.png',
+        'https://i.imgur.com/2ywOZRI.png',
+        'https://i.imgur.com/9FhZCCB.png',
+        'https://i.imgur.com/z0nQzyY.png',
+        'https://i.imgur.com/vS8o6bU.png',
+        'https://i.imgur.com/iEbmg3L.png',
+        'https://i.imgur.com/5YE99Wx.png',
+        'https://i.imgur.com/NGq6PEn.png',
+        'https://i.imgur.com/Ikf7cIj.png',
+        'https://i.imgur.com/CBHI6FX.png',
+        'https://i.imgur.com/M9bpSNX.png',
+        'https://i.imgur.com/GRMCQVT.png',
+        'https://i.imgur.com/IrugbA9.png',
+        'https://i.imgur.com/yEKFZMA.png',
+        'https://i.imgur.com/2lKwxgE.png',
+        'https://i.imgur.com/AgVEGrO.png',
+        'https://i.imgur.com/upH1i3M.png',
+        'https://i.imgur.com/gMLqt3j.png',
+        'https://i.imgur.com/5SmcjcL.png',
+        'https://i.imgur.com/EoEaCj6.png',
+        'https://i.imgur.com/Se4RKnE.png'
+      ],
+      author: author2._id
     }
   ]
 
