@@ -8,7 +8,7 @@ A manga reading application
 
 #### By: Matthew Scott
 
-#### [Trello](https://trello.com/invite/b/5XP1tWL6/04e96875c73c681c73b668404050382f/weebmanga) | [LinkedIn](https://www.linkedin.com/in/matthew-scott95/) | [GitHub](https://github.com/gr8tscott)
+#### [Trello](https://trello.com/b/5XP1tWL6/weebmanga) | [LinkedIn](https://www.linkedin.com/in/matthew-scott95/) | [GitHub](https://github.com/gr8tscott)
 
 ---
 
