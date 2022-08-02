@@ -6,6 +6,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
   Author.collection.drop()
   Manga.collection.drop()
+  Review.collection.drop()
+
   const author1 = await new Author({
     name: 'Masashi Kishimoto',
     works_created: ['Naruto'],
