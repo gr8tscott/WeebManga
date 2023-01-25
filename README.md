@@ -18,7 +18,7 @@ A manga reading application
 
 ##### Each manga has the complete first chapter available in English translation to read through (from right to left) and enjoy.
 
-##### You can check out the project [here](https://weebmanga.herokuapp.com/) on heroku.
+##### You can check out the project [here](https://weebmanga1.herokuapp.com/) on heroku.
 
 ---
 
